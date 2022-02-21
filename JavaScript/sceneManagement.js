@@ -242,7 +242,7 @@ class Scene {
         passiveAbilityText.y = app.view.height*(16/20);
 
         let playBtn = new PIXI.Text('CONTINUE',
-        {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:20 ,fontSize: 30, fill : 0x000000, align : 'center'});
+        {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:20 ,fontSize: 25, fill : 0x000000, align : 'center'});
 
         playBtn.anchor.set(0.5);
         playBtn.x = app.view.width/2;
