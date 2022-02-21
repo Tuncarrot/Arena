@@ -311,6 +311,10 @@ class Scene {
         abilitiesScreen.addChild(playBtn);
     }
 
+    drawGameScene = () => {
+
+    }
+
     onPlayButtonDown = () => {
         this.switchScene(CHAR_SCREEN);
     }
@@ -402,7 +406,7 @@ class Scene {
         // Base stats are out of 10, multiply by 25 to fit data chart
 
         let characterDataBank = charDataBank.getCharInfo(charSelection, spriteSheetSelection);
-        let abilityDataBank = charDataBank.getAbilityInfo(charSelection); // CLEO's Ability for now
+        let abilityDataBank = charDataBank.getAbilityInfo(charSelection, spriteSheetSelection);
         
         passiveAbilityText.text = abilityDataBank[0] + " - " + abilityDataBank[1];
         charNameText.text = characterDataBank[CHAR_NAME];

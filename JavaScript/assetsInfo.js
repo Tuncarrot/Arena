@@ -14,6 +14,8 @@ let projectile_electric_0 = ["projectile_electric_0", 16,16,6];
 let abilityData = {
  // Abilities are assigned by ID, so they can be re arranged in the future and not bound too closely to individual characters
  // ID: Ability Name, Ability Description, Modifiers?
+
+    // Argonian Region
     0: ["FORESIGHT" , "XP IS GAINED 25% FASTER"],
     1: ["HEAVY HAND", "DESTRUCTION 10% STRONGER"],
     2: ["OMNI", "ALL STATS INCREASE 5% FASTER"],
@@ -22,6 +24,8 @@ let abilityData = {
     5: ["FORTIFIED", "GUARD 20% STRONGER"],
     6: ["ENCHANTED ARMOUR", "GUARD REGENERATE 15% FASTER"],
     7: ["ALTERNATE POWER", "DESTRUCTION AND SOUL REGENERATE 10% FASTER"],
+
+    // Zentrofia
     8: ["TBD", "IDK"],
     9: ["TBD", "IDK"],
     10: ["TBD", "IDK"],
@@ -96,6 +100,7 @@ class AssetsInfo {
 
         if (spriteSelection == 1)
         {
+            // This is first region character stats
             returnData = charData[charSelection];
         }
         else
@@ -107,8 +112,21 @@ class AssetsInfo {
         return returnData;
     }
 
-    getAbilityInfo = (abilityID) =>
+    getAbilityInfo = (abilityID, spriteSelection) =>
     {
-        return abilityData[abilityID];
+        let returnData;
+
+        if (spriteSelection == 1)
+        {
+            // First region ability data
+            returnData = abilityData[abilityID];
+        }
+        else
+        {
+            // Return ability data from second region
+            returnData = abilityData[abilityID+8];
+        }
+
+        return returnData;
     }
 }
