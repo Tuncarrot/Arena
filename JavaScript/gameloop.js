@@ -178,4 +178,5 @@ gameLoop = (delta) => {
     // Update projectiles
     updateProjectiles(delta);
     updateStatus(delta);
+    updateStatsUI(delta);
 }

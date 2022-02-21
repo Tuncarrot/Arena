@@ -57,6 +57,7 @@ const SPEED_STAT=5;
 const PIXEL_BAR_ADJUST=25;
 const START_X_POS=0;
 const START_Y_POS=0;
+const STATS_BAR_HEIGHT=15;
 
 // Character Selection
 const MIN_CHAR_NUMBER=0;

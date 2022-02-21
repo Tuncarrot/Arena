@@ -39,6 +39,12 @@ updateStatus = (delta) => {
   status_2.y = player.y;  
 }
 
-updateGameUI = () => {
-    
+updateStatsUI = (delta) => {
+
+    gameDamageBar.width = playerObj.dmg * PIXEL_BAR_ADJUST; // Damage
+    gameHealthBar.width = playerObj.hp * PIXEL_BAR_ADJUST;
+    gameManaBar.width = playerObj.mana * PIXEL_BAR_ADJUST;
+    gameDefenseBar.width = playerObj.def * PIXEL_BAR_ADJUST;
+    gameSpeedBar.width = playerObj.speed * PIXEL_BAR_ADJUST;
+
 }

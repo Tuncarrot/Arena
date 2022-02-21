@@ -315,90 +315,90 @@ class Scene {
     drawGameScene = () => {
 
         // Damage UI
-        let damageText = new PIXI.Text('DESTRUCTION',
+        let gameDamageText = new PIXI.Text('DESTRUCTION',
         {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
 
-        damageText.anchor.set(1);
-        damageText.x = app.view.width*(2/15);
-        damageText.y = app.view.height*(35/40);
+        gameDamageText.anchor.set(1);
+        gameDamageText.x = app.view.width*(2/15);
+        gameDamageText.y = app.view.height*(35/40);
 
-        damageBar = new PIXI.Graphics();
-        damageBar.beginFill(COLOUR_BLUE);
-        damageBar.drawRect(0,-20,250,20); // Third Value, charSelection => stats
+        gameDamageBar = new PIXI.Graphics();
+        gameDamageBar.beginFill(COLOUR_BLUE);
+        gameDamageBar.drawRect(0,-STATS_BAR_HEIGHT,250,STATS_BAR_HEIGHT); // Third Value, charSelection => stats
 
-        damageBar.x = app.view.width*(2/15);
-        damageBar.y = app.view.height*(35/40);
+        gameDamageBar.x = app.view.width*(2/15);
+        gameDamageBar.y = app.view.height*(35/40);
 
         // Health UI
-        let healthText = new PIXI.Text('HEART',
+        let gameHealthText = new PIXI.Text('HEART',
         {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
 
-        healthText.anchor.set(1);
-        healthText.x = app.view.width*(2/15);
-        healthText.y = app.view.height*(36/40);
+        gameHealthText.anchor.set(1);
+        gameHealthText.x = app.view.width*(2/15);
+        gameHealthText.y = app.view.height*(36/40);
 
-        healthBar = new PIXI.Graphics();
-        healthBar.beginFill(COLOUR_BLUE);
-        healthBar.drawRect(0,-20,250,20);
+        gameHealthBar = new PIXI.Graphics();
+        gameHealthBar.beginFill(COLOUR_BLUE);
+        gameHealthBar.drawRect(0,-STATS_BAR_HEIGHT,250,STATS_BAR_HEIGHT);
 
-        healthBar.x = app.view.width*(2/15);
-        healthBar.y = app.view.height*(36/40);
+        gameHealthBar.x = app.view.width*(2/15);
+        gameHealthBar.y = app.view.height*(36/40);
 
         // Mana UI
-        let manaText = new PIXI.Text('SOUL',
+        let gameManaText = new PIXI.Text('SOUL',
         {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
 
-        manaText.anchor.set(1);
-        manaText.x = app.view.width*(2/15);
-        manaText.y = app.view.height*(37/40);
+        gameManaText.anchor.set(1);
+        gameManaText.x = app.view.width*(2/15);
+        gameManaText.y = app.view.height*(37/40);
 
-        manaBar = new PIXI.Graphics();
-        manaBar.beginFill(COLOUR_BLUE);
-        manaBar.drawRect(0,-20,250,20);
+        gameManaBar = new PIXI.Graphics();
+        gameManaBar.beginFill(COLOUR_BLUE);
+        gameManaBar.drawRect(0,-STATS_BAR_HEIGHT,250,STATS_BAR_HEIGHT);
 
-        manaBar.x = app.view.width*(2/15);
-        manaBar.y = app.view.height*(37/40);
+        gameManaBar.x = app.view.width*(2/15);
+        gameManaBar.y = app.view.height*(37/40);
 
         // Defense UI
-        let defenseText = new PIXI.Text('GUARD',
+        let gameDefenseText = new PIXI.Text('GUARD',
         {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
 
-        defenseText.anchor.set(1);
-        defenseText.x = app.view.width*(2/15);
-        defenseText.y = app.view.height*(38/40);
+        gameDefenseText.anchor.set(1);
+        gameDefenseText.x = app.view.width*(2/15);
+        gameDefenseText.y = app.view.height*(38/40);
 
-        defenseBar = new PIXI.Graphics();
-        defenseBar.beginFill(COLOUR_BLUE);
-        defenseBar.drawRect(0,-20,250,20);
+        gameDefenseBar = new PIXI.Graphics();
+        gameDefenseBar.beginFill(COLOUR_BLUE);
+        gameDefenseBar.drawRect(0,-STATS_BAR_HEIGHT,250,STATS_BAR_HEIGHT);
 
-        defenseBar.x = app.view.width*(2/15);
-        defenseBar.y = app.view.height*(38/40);
+        gameDefenseBar.x = app.view.width*(2/15);
+        gameDefenseBar.y = app.view.height*(38/40);
 
         // Speed UI
-        let speedText = new PIXI.Text('SWIFTNESS',
+        let gameSpeedText = new PIXI.Text('SWIFTNESS',
         {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
 
-        speedText.anchor.set(1);
-        speedText.x = app.view.width*(2/15);
-        speedText.y = app.view.height*(39/40);
+        gameSpeedText.anchor.set(1);
+        gameSpeedText.x = app.view.width*(2/15);
+        gameSpeedText.y = app.view.height*(39/40);
 
-        speedBar = new PIXI.Graphics();
-        speedBar.beginFill(COLOUR_BLUE);
-        speedBar.drawRect(0,-20,250,20);
+        gameSpeedBar = new PIXI.Graphics();
+        gameSpeedBar.beginFill(COLOUR_BLUE);
+        gameSpeedBar.drawRect(0,-STATS_BAR_HEIGHT,250,STATS_BAR_HEIGHT);
 
-        speedBar.x = app.view.width*(2/15);
-        speedBar.y = app.view.height*(39/40);
+        gameSpeedBar.x = app.view.width*(2/15);
+        gameSpeedBar.y = app.view.height*(39/40);
 
-        gameScreen.addChild(damageText);
-        gameScreen.addChild(damageBar);
-        gameScreen.addChild(healthText);
-        gameScreen.addChild(healthBar);
-        gameScreen.addChild(manaText);
-        gameScreen.addChild(manaBar);
-        gameScreen.addChild(defenseText);
-        gameScreen.addChild(defenseBar);
-        gameScreen.addChild(speedText);
-        gameScreen.addChild(speedBar);
+        gameScreen.addChild(gameDamageText);
+        gameScreen.addChild(gameDamageBar);
+        gameScreen.addChild(gameHealthText);
+        gameScreen.addChild(gameHealthBar);
+        gameScreen.addChild(gameManaText);
+        gameScreen.addChild(gameManaBar);
+        gameScreen.addChild(gameDefenseText);
+        gameScreen.addChild(gameDefenseBar);
+        gameScreen.addChild(gameSpeedText);
+        gameScreen.addChild(gameSpeedBar);
 
     }
 

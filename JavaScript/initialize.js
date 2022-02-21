@@ -66,6 +66,13 @@ let defenseBar;
 let charDataBank;
 let passiveAbilityText;
 
+// UI Data Components IN GAME
+let gameDamageBar;
+let gameHealthBar;
+let gameManaBar;
+let gameDefenseBar;
+let gameSpeedBar;
+
 // UI Styling Components
 let selectSetOneBtn;
 let selectSetTwoBtn;
