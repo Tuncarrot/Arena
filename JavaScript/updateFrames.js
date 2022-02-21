@@ -38,3 +38,7 @@ updateStatus = (delta) => {
   status_2.x = player.x;
   status_2.y = player.y;  
 }
+
+updateGameUI = () => {
+    
+}

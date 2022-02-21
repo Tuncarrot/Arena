@@ -311,7 +311,94 @@ class Scene {
         abilitiesScreen.addChild(playBtn);
     }
 
+    // Draw game scene
     drawGameScene = () => {
+
+        // Damage UI
+        let damageText = new PIXI.Text('DESTRUCTION',
+        {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
+
+        damageText.anchor.set(1);
+        damageText.x = app.view.width*(2/15);
+        damageText.y = app.view.height*(35/40);
+
+        damageBar = new PIXI.Graphics();
+        damageBar.beginFill(COLOUR_BLUE);
+        damageBar.drawRect(0,-20,250,20); // Third Value, charSelection => stats
+
+        damageBar.x = app.view.width*(2/15);
+        damageBar.y = app.view.height*(35/40);
+
+        // Health UI
+        let healthText = new PIXI.Text('HEART',
+        {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
+
+        healthText.anchor.set(1);
+        healthText.x = app.view.width*(2/15);
+        healthText.y = app.view.height*(36/40);
+
+        healthBar = new PIXI.Graphics();
+        healthBar.beginFill(COLOUR_BLUE);
+        healthBar.drawRect(0,-20,250,20);
+
+        healthBar.x = app.view.width*(2/15);
+        healthBar.y = app.view.height*(36/40);
+
+        // Mana UI
+        let manaText = new PIXI.Text('SOUL',
+        {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
+
+        manaText.anchor.set(1);
+        manaText.x = app.view.width*(2/15);
+        manaText.y = app.view.height*(37/40);
+
+        manaBar = new PIXI.Graphics();
+        manaBar.beginFill(COLOUR_BLUE);
+        manaBar.drawRect(0,-20,250,20);
+
+        manaBar.x = app.view.width*(2/15);
+        manaBar.y = app.view.height*(37/40);
+
+        // Defense UI
+        let defenseText = new PIXI.Text('GUARD',
+        {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
+
+        defenseText.anchor.set(1);
+        defenseText.x = app.view.width*(2/15);
+        defenseText.y = app.view.height*(38/40);
+
+        defenseBar = new PIXI.Graphics();
+        defenseBar.beginFill(COLOUR_BLUE);
+        defenseBar.drawRect(0,-20,250,20);
+
+        defenseBar.x = app.view.width*(2/15);
+        defenseBar.y = app.view.height*(38/40);
+
+        // Speed UI
+        let speedText = new PIXI.Text('SWIFTNESS',
+        {fontFamily : 'pixel', dropShadow:true, dropShadowAlpha:1, dropShadowColor:COLOUR_BLUE, dropShadowDistance:5, dropShadowBlur:3, letterSpacing:2 ,fontSize: 10, fill : 0x000000, align : 'center'});
+
+        speedText.anchor.set(1);
+        speedText.x = app.view.width*(2/15);
+        speedText.y = app.view.height*(39/40);
+
+        speedBar = new PIXI.Graphics();
+        speedBar.beginFill(COLOUR_BLUE);
+        speedBar.drawRect(0,-20,250,20);
+
+        speedBar.x = app.view.width*(2/15);
+        speedBar.y = app.view.height*(39/40);
+
+        gameScreen.addChild(damageText);
+        gameScreen.addChild(damageBar);
+        gameScreen.addChild(healthText);
+        gameScreen.addChild(healthBar);
+        gameScreen.addChild(manaText);
+        gameScreen.addChild(manaBar);
+        gameScreen.addChild(defenseText);
+        gameScreen.addChild(defenseBar);
+        gameScreen.addChild(speedText);
+        gameScreen.addChild(speedBar);
 
     }
 
@@ -423,6 +510,7 @@ class Scene {
         charScreen.addChild(manaBar);
         charScreen.addChild(defenseBar);
         charScreen.addChild(speedBar);
+
     }
 
     selectSpriteCollection1 = () => {
@@ -518,7 +606,7 @@ class Scene {
         this.drawMainScene();
         this.drawCharScene();
         this.drawAbilityScene();
-        // Draw Game Screen
+        this.drawGameScene();
 
     }
 
