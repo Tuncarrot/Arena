@@ -43,6 +43,7 @@ const REGION_TWO="ZENTROFIA REGION";
 // Colours
 const COLOUR_ORANGE=0xF29F05;
 const COLOUR_BLUE=0x94BDF2;
+const COLOUR_RED=0xFF0000;
 
 // Character Stats
 const CHAR_NAME=0;
